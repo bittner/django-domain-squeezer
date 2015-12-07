@@ -22,27 +22,28 @@ Setup
 
 #. Create a Django project::
 
-   $ django-admin createproject revivemydomain
+    $ django-admin createproject revivemydomain
 
 #. Install django-domain-squeezer::
 
-   $ pip install django-domain-squeezer
+    $ pip install django-domain-squeezer
 
-#. Add `domain_squeezer` and its dependencies to your project's `INSTALLED_APPS`::
+#. Add ``domain_squeezer`` and its dependencies to your project's
+   ``INSTALLED_APPS``::
 
-   INSTALLED_APPS = (
-       'analytical',
-       'domain_squeezer',
-   )
+    INSTALLED_APPS = (
+        'analytical',
+        'domain_squeezer',
+    )
 
-#. Append the django-domain-squeezer `urls` to your project's `urls.py`::
+#. Append the django-domain-squeezer ``urls`` to your project's ``urls.py``::
 
-   urlpatterns = [
-       # ...
-       url(r'^', include('domain_squeezer.urls')),
-   ]
+    urlpatterns = [
+        # ...
+        url(r'^', include('domain_squeezer.urls')),
+    ]
 
-#. Add a `SQUEEZER_SITEMAP` setting to your project's `settings.py` file.
+#. Add a ``SQUEEZER_SITEMAP`` setting to your project's ``settings.py`` file.
    See the Settings_ section below for details.
 
 #. Adapt your templates, and beautify the new home for your domain.
@@ -54,10 +55,10 @@ The following values are available in your project settings file.
 
 :SQUEEZER_SITEMAP:
    Dictionary for content displayed in the website footer.
-   `words` are used to generate random links the make up a sitemap.
-   `links` are a manual selection of your favorite links to external sites.
+   ``words`` are used to generate random links the make up a sitemap.
+   ``links`` are a manual selection of your favorite links to external sites.
 
-   Default::
+   **Default:** ::
 
       {
           'words': [
@@ -72,4 +73,4 @@ The following values are available in your project settings file.
 :SQUEEZER_URL_MAX_WORDS:
    Maximum length of URL path in words (maximum words evaluated in URL).
 
-   Default: :int:`20`
+   **Default:** ``20``
