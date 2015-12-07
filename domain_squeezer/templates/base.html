@@ -1,0 +1,28 @@
+{% extends "skeleton.html" %}
+
+{% block body %}
+<h1>{% block title %}{% endblock %}</h1>
+
+<header>
+{% block breadcrumb %}{% endblock %}
+</header>
+
+{% block content %}{% endblock %}
+
+<footer>
+{% block sitemap %}
+	<nav class="sitemap">
+	{% for title, path in sitemap %}
+		<li><a href="{{ path }}">{{ title }}</a></li>
+	{% endfor %}
+	</nav>
+{% endblock sitemap %}
+{% block links %}
+	<nav class="links">
+	{% for title, path in links %}
+		<li><a href="{{ path }}" class="external">{{ title }}</a></li>
+	{% endfor %}
+	</nav>
+{% endblock links %}
+</footer>
+{% endblock body %}

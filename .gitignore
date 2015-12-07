@@ -1,0 +1,25 @@
+# tools, IDEs
+/.idea/
+/*.geany
+
+# build files and folders
+.cache/
+/.coverage
+/coverage.xml
+/reports/
+.sass-cache/
+/.tox/
+/build/
+/dist/
+/*.egg/
+/*.egg-info/
+/*.eggs/
+/docs/build/
+
+# test projects and data
+/*.sqlite3
+/test_project_*/
+/unittests.xml
+
+# Django and Python
+*.py[cod]
