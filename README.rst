@@ -55,7 +55,7 @@ The following values are available in your project settings file.
 
 :SQUEEZER_SITEMAP:
    Dictionary for content displayed in the website footer.
-   ``words`` are used to generate random links the make up a sitemap.
+   ``words`` are used to generate random links that make up a sitemap.
    ``links`` are a manual selection of your favorite links to external sites.
 
    **Default:** ::
@@ -74,3 +74,11 @@ The following values are available in your project settings file.
    Maximum length of URL path in words (maximum words evaluated in URL).
 
    **Default:** ``20``
+
+:Analytics Services:
+   See the `documentation of django-analytical`_ on how to set up the service
+   of your choice.
+
+
+.. _documentation of django-analytical:
+    https://pythonhosted.org/django-analytical/
