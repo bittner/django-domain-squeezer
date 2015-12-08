@@ -23,7 +23,7 @@ def default_context():
 
 
 def index(request):
-    return render_to_response('index.html', default_context())
+    return render_to_response('domain_squeezer/index.html', default_context())
 
 
 def path(request, *args):
@@ -42,4 +42,4 @@ def path(request, *args):
     context['words'] = words
     context['breadcrumb'] = breadcrumb
 
-    return render_to_response('path.html', context)
+    return render_to_response('domain_squeezer/path.html', context)
