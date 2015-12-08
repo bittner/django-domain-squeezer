@@ -32,6 +32,8 @@ Setup
    ``INSTALLED_APPS``::
 
     INSTALLED_APPS = (
+        # ...
+        'django.contrib.sites',
         'analytical',
         'domain_squeezer',
     )
@@ -82,3 +84,15 @@ The following values are available in your project settings file.
 
 .. _documentation of django-analytical:
     https://pythonhosted.org/django-analytical/
+
+Site Settings And Several Domains
+---------------------------------
+
+You may want to set the name and domain of your website in the database using
+the *Sites* model in the Django Admin.
+
+Optionally, if you want to run several sites with a single Django project you
+can do so with Django's `sites framework`_.
+
+
+.. _sites framework: https://docs.djangoproject.com/en/1.8/ref/contrib/sites/

@@ -1,0 +1,5 @@
+	<nav class="sitemap">
+	{% for title, path in sitemap %}
+		<li><a href="{{ path }}">{{ title }}</a></li>
+	{% endfor %}
+	</nav>

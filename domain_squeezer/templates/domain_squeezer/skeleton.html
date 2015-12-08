@@ -1,12 +1,23 @@
-{% load staticfiles %}<!DOCTYPE html>
+<!DOCTYPE html>{% load staticfiles %}{% load domain_squeezer %}
 <html lang="en">
 <head>
+{% block head %}
+	{% block meta %}
 	<meta charset="utf-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	<title>{% block title %}{% endblock %} - Weihnachtsbasar</title>
+	{% endblock meta %}
+	<title>{% block title %}{% endblock title %} - {{ site_name }}</title>
+	{% block css %}
 	<link href="{% static 'style.css' %}" rel="stylesheet">
+	{% endblock css %}
+{% endblock head %}
 </head>
 <body>
-	{% block body %}{% endblock %}
+{% block body %}
+	<header>{% block header %}{% endblock %}</header>
+	<main>{% block main %}{% endblock %}</main>
+	<footer>{% block footer %}{% endblock %}</footer>
+	{% block javascript %}{% endblock %}
+{% endblock body %}
 </body>
 </html>
