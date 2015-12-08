@@ -1,10 +1,10 @@
-from django import template
-from django.core.urlresolvers import reverse_lazy
 from django.contrib.sites.shortcuts import get_current_site
+from django.core.urlresolvers import reverse_lazy
+from django.template import Library
 
 from ..settings import SITEMAP
 
-register = template.Library()
+register = Library()
 
 
 @register.inclusion_tag('domain_squeezer/tags/sitemap.html')
@@ -31,10 +31,12 @@ def site_links():
 @register.simple_tag
 def site_name():
     """Website name as stored in the database (Django sites framework)."""
-    return get_current_site.name
+    request = None  # FIXME
+    return get_current_site(request).name
 
 
 @register.simple_tag
 def site_domain():
     """Website domain as stored in the database (Django sites framework)."""
-    return get_current_site.domain
+    request = None  # FIXME
+    return get_current_site(request).domain

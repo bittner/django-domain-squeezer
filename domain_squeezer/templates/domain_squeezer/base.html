@@ -7,6 +7,6 @@
 {% endblock header %}
 
 {% block footer %}
-	{% block sitemap %}{{ site_sitemap }}{% endblock %}
-	{% block links %}{{ site_links }}{% endblock %}
+	{% block sitemap %}{% site_sitemap %}{% endblock %}
+	{% block links %}{% site_links %}{% endblock %}
 {% endblock footer %}
