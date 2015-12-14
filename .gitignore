@@ -22,4 +22,5 @@
 /unittests.xml
 
 # Django and Python
+__pycache__/
 *.py[cod]

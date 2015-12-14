@@ -5,7 +5,7 @@ from pip.req import parse_requirements
 from setuptools import setup, find_packages
 from setuptools.command.test import test as TestCommand
 
-import domain_squeezer
+import domain_squeezer as package
 import sys
 
 CLASSIFIERS = [
@@ -56,15 +56,15 @@ def read_requirements():
 
 setup(
     name='django-domain-squeezer',
-    version=domain_squeezer.__version__,
-    author=domain_squeezer.__author__,
-    author_email=domain_squeezer.__author_email__,
-    maintainer=domain_squeezer.__maintainer__,
-    maintainer_email=domain_squeezer.__maintainer_email__,
-    url=domain_squeezer.__url__,
-    license=domain_squeezer.__license__,
+    version=package.__version__,
+    author=package.__author__,
+    author_email=package.__author_email__,
+    maintainer=package.__maintainer__,
+    maintainer_email=package.__maintainer_email__,
+    url=package.__url__,
+    license=package.__license__,
 
-    description=domain_squeezer.__doc__.strip(),
+    description=package.__doc__.strip(),
     long_description=read_file('README.rst'),
     keywords='domains, monetization, django, python',
 
